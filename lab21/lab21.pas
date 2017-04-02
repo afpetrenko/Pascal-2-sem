@@ -35,15 +35,13 @@ Procedure sort();
 var
   i, k, j, r : byte;
   check : boolean;
-label
-  mark, mark1;
 begin
 
 k := 1;
 j := 1;
 r := 1;
 
-mark1:
+repeat
 while k <= n do
   begin
   i := 1;
@@ -54,7 +52,7 @@ while k <= n do
       then
       begin
         check := true;
-         goto mark;
+         break
          end
       else
         inc(i);
@@ -66,7 +64,7 @@ while k <= n do
     break;
   end;
   
-    mark:
+    
     if check = true then
     begin
     m1[j] := m[k];
@@ -83,8 +81,7 @@ while k <= n do
    check := false;
     end;
    
-   if k <= n then
-    goto mark1;
+   until k > n;
     
     writeln;
     dec(j);
