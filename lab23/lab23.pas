@@ -1,10 +1,11 @@
 Program lab23;
+Uses unitmax;
 Type
   rec = record
   name2, name : string [20];
   sch, bal : byte;
   end;
-  tmas = array[1..3] of rec
+  tmas = array[1..3] of rec;
 Var
   mas : tmas;
   masx : rec;
@@ -33,6 +34,11 @@ Begin
           bal := 84;
           end;
 end;
+
+Begin
+input();
+max(mas);
+end.
 
 
   
