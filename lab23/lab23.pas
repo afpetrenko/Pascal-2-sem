@@ -2,9 +2,10 @@ Program lab23;
 Uses unitmax;
 
 Begin
-input();
-max();
-write();
+  input();
+  max();
+  print();
+  write();
 end.
 
 
